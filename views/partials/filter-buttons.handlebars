@@ -1,0 +1,23 @@
+<div class="flex flex-col mt-10" id="filterBtns">
+  <!-- Filter Buttons Container -->
+  <div class="flex">
+    <!-- Loop through each filter and create a filter button -->
+    {{#each filters}}
+      <a
+        href="/?filter={{this.filterName}}"               
+        hx-boost="true"                                  
+        hx-swap="transition:true"                        
+        class="border-2 border-indigo-500 p-4 rounded-lg w-1/2 uppercase font-bold 
+               transition-all hover:bg-indigo-400 mr-2 hover:scale-105 text-center cursor-pointer 
+               {{#ifEqual @root.selectedFilter this.filterName}} bg-indigo-500{{/ifEqual}}"
+      >
+        {{this.filterName}} ({{this.count}})              
+      </a>
+    {{/each}}
+  </div>
+
+  <!-- Display the "no todos" partial if noTodos is false -->
+  {{#unless noTodos}}
+    {{>noTodo}}                                         
+  {{/unless}}
+</div>

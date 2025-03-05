@@ -1,0 +1,4 @@
+{
+    "ext":"handlebars,js,css",
+    "ignore":["**/db.json"]
+}

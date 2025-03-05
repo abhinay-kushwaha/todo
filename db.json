@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "id": "e9d8b225-e2d5-4165-9f22-5994849c0171",
+      "completed": false,
+      "name": "Learn CSS"
+    },
+    {
+      "id": "8605dbba-8b99-44d8-a5ad-de966c31600f",
+      "completed": false,
+      "name": "Learn HTML"
+    },
+    {
+      "id": "1cfbd82c-8d9c-4567-9f71-efbb4fdb5266",
+      "completed": false,
+      "name": "Learn HTMX"
+    },
+    {
+      "id": "84a635f0-f4d2-4ad2-a34a-1853f00f9e80",
+      "completed": false,
+      "name": "Learn React"
+    }
+  ]
+}

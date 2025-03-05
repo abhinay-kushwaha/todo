@@ -1,0 +1,13 @@
+<div class="max-w-2xl mx-auto text-white">
+  <h1
+    class="text-center my-12 text-5xl font-bold underline uppercase font-alata"
+  >Todo App</h1>
+  {{>todoInput}}
+  {{>filterBtns}}
+  <div class="flex flex-col mt-12 text-2xl">
+    {{#each todos}}
+      {{>todoItem}}
+    {{/each}}
+    
+  </div>
+</div>
