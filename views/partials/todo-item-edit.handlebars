@@ -1,11 +1,11 @@
-<div id="todo-edit-{{this.id}}">
+<div id="todo-edit-{{this._id}}">
   <form
-    hx-put="/todos/{{this.id}}"
-    hx-target="#todo-edit-{{this.id}}"
+    hx-put="/todos/{{this._id}}"
+    hx-target="#todo-edit-{{this._id}}"
     hx-swap="outerHTML transition:true"
     class="flex items-center mb-4 justify-between gap-4"
     oninput="
-      const saveButton = document.getElementById('saveButton-{{this.id}}');
+      const saveButton = document.getElementById('saveButton-{{this._id}}');
       const isUnchanged = this.name.value.trim() === this.name.defaultValue.trim();
       saveButton.disabled = isUnchanged;
       saveButton.classList.toggle('border-gray-400', isUnchanged);
@@ -19,14 +19,14 @@
       name="name"
     />
     <button
-      id="saveButton-{{this.id}}"
+      id="saveButton-{{this._id}}"
       type="submit"
       disabled
       class="p-2 border-2 text-sm border-gray-400 rounded-md uppercase transition-all font-bold hover:bg-indigo-400 mr-2 hover:scale-105 w-1/4 disabled:bg-gray-400 disabled:cursor-not-allowed"
     > Save</button>
     <button
-      hx-get="/todos/{{this.id}}?filter={{this.selectedFilter}}"
-      hx-target="#todo-edit-{{this.id}}"
+      hx-get="/todos/{{this._id}}?filter={{this.selectedFilter}}"
+      hx-target="#todo-edit-{{this._id}}"
       hx-swap="outerHTML transition:true"
       type="button"
       class="border-2 text-sm border-neutral-500 p-2 rounded-md uppercase font-bold transition-all hover:bg-indigo-400 mr-2 hover:scale-105 w-1/4"

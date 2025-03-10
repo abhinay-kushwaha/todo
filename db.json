@@ -1,11 +1,6 @@
 {
   "todos": [
     {
-      "id": "e9d8b225-e2d5-4165-9f22-5994849c0171",
-      "completed": false,
-      "name": "Learn CSS"
-    },
-    {
       "id": "8605dbba-8b99-44d8-a5ad-de966c31600f",
       "completed": false,
       "name": "Learn HTML"
@@ -19,6 +14,11 @@
       "id": "84a635f0-f4d2-4ad2-a34a-1853f00f9e80",
       "completed": false,
       "name": "Learn React"
+    },
+    {
+      "id": "77c92cd3-c3fb-4c2d-af93-9d86b77bc700",
+      "completed": false,
+      "name": "zlknvaksjndfkjbpf"
     }
   ]
 }

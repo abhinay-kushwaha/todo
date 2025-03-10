@@ -6,23 +6,26 @@
   "engines": {
     "node": "20.x"
   },
- "scripts": {
-  "start": "node index.js",
-  "watch": "tailwindcss -i ./index.css -o ./public/css/style.css --watch",
-  "build:css": "tailwindcss -i ./index.css -o ./public/css/style.css",
-  "build": "npm run build:css && cp node_modules/htmx.org/dist/htmx.min.js public/js/ && cp index.html public/",
-  "deploy": "npm run build && NODE_ENV=production node index.js"
-},
+  "scripts": {
+    "start": "nodemon index.js",
+    "watch": "tailwindcss -i ./index.css -o ./public/css/style.css --watch",
+    "build:css": "tailwindcss -i ./index.css -o ./public/css/style.css",
+    "build": "npm run build:css && cp node_modules/htmx.org/dist/htmx.min.js public/js/ && cp index.html public/",
+    "deploy": "npm run build && NODE_ENV=production node index.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "express-handlebars": "^8.0.1",
     "handlebars": "^4.7.8",
     "htmx.org": "^2.0.4",
     "lowdb": "^7.0.1",
+    "mongodb": "^6.14.2",
+    "mongoose": "^8.12.1",
     "uuid": "^11.0.4"
   },
   "devDependencies": {

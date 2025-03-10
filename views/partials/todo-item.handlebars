@@ -1,10 +1,10 @@
-<div class="flex items-center mb-4 justify-between" id="todo-{{this.id}}">
+<div class="flex items-center mb-4 justify-between" id="todo-{{this._id}}">
   <div class="flex items-center">
     <input
       name="completed"
       hx-target="body"
       hx-swap="innerHTML transition:true"
-      hx-patch="/todo/{{this.id}}"
+      hx-patch="/todo/{{this._id}}"
       type="checkbox"
       class="h-6 w-6 mr-4"
       {{#if this.completed}} checked {{/if}}
@@ -14,8 +14,8 @@
   <div class="flex gap-4">
     <!-- Edit Button -->
     <img
-      hx-get="/todos/{{this.id}}/edit?filter={{this.selectedFilter}}{{#unless this.selectedFilter}}{{@root.selectedFilter}}{{/unless}}"
-      hx-target="#todo-{{this.id}}"
+      hx-get="/todos/{{this._id}}/edit?filter={{this.selectedFilter}}{{#unless this.selectedFilter}}{{@root.selectedFilter}}{{/unless}}"
+      hx-target="#todo-{{this._id}}"
       hx-swap="outerHTML transition:true"
       src="assets/edit.svg"
       alt="Edit"
@@ -25,9 +25,9 @@
 
     <!-- Delete Button -->
     <img
-      hx-delete="/todos/{{this.id}}?filter={{this.selectedFilter}}{{#unless this.selectedFilter}}{{@root.selectedFilter}}{{/unless}}"
+      hx-delete="/todos/{{this._id}}?filter={{this.selectedFilter}}{{#unless this.selectedFilter}}{{@root.selectedFilter}}{{/unless}}"
       hx-confirm="Are you sure?"
-      hx-target="#todo-{{this.id}}"
+      hx-target="#todo-{{this._id}}"
       hx-swap="delete transition:true"
       hx-select-oob="#filterBtns"
       src="assets/trash.svg"
